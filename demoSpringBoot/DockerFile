@@ -1,0 +1,5 @@
+FROM openjdk:8
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} demoSpringBoot-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/Nagendra/Springs WS1/demoSpringBoot/target","-jar","/demoSpringBoot-0.0.1-SNAPSHOT.jar"]
